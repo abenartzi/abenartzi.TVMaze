@@ -24,9 +24,11 @@ header nav ul{
     background-color: #065d2d;
 
 }
-header nav ul li{
+header nav > ul > li{
     display: inline-block;
+    position: relative;
 }
+
 header nav ul li a{
     text-decoration: none;
     color: white;
@@ -36,10 +38,10 @@ header nav ul li a{
 header nav ul li a:hover{
     background-color:#55b194eb;
 }
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+/*.dropdown {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*}*/
 
 .dropdown-content {
     display: none;
@@ -56,6 +58,12 @@ header nav ul li a:hover{
     display: block;
 }
 .dropdown:hover .dropdown-content {display: inline-block;}
+
+.inner-menu{
+    display:none;
+    padding: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
 
 .searchForm button{
     background-color: #367d67eb;
@@ -101,3 +109,65 @@ header nav ul li a:hover{
     position: relative;
 
 }
+header nav > ul > li:hover .inner-menu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+.inner-menu > li {
+    position: relative;
+}
+.inner-menu a{
+    color:#055d2d;
+    background-color:#f1f1f1;
+    min-width: 160px;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly
+}
+.container div{
+    display: flex;
+    flex-direction: column;
+}
+.container img{
+    margin-bottom: -4px;
+}
+.ratings{
+    display: flex;
+    background-color: #43AC6A;
+    height: 90px;
+    width: 200px;
+}
+.ratings a{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+}
+.ratings span a:hover{
+    text-decoration: underline;
+    margin: 0;
+}
+h2{
+    font-size: 1rem;
+}
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+}
+
+.inner-container{
+    display: flex;
+    border-top: 1px solid white;
+}
+.inner-container div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
